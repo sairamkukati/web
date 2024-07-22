@@ -1,0 +1,21 @@
+name: CI-CD
+on: push
+jobs: 
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get code
+        run: echo "getting code from repo"
+        uses: actions/checkout@v3
+      - name: Install Node v18
+        run: echo "installing node v18"
+        uses: actions/setup-node@v3
+        with: 
+          node-version: 18
+      - name: Install dependencies
+        uses: npm ci
+      - name: run tests
+        run: |
+          echo "running tests"
+          npm run tests
+  
