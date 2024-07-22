@@ -11,7 +11,7 @@ jobs:
         with: 
           node-version: 18
       - name: Install dependencies
-        uses: npm ci
+        run: npm ci
       - name: run tests
         run: |
           echo "running tests"
