@@ -16,4 +16,10 @@ jobs:
         run: |
           echo "running tests"
           npm run test
-  
+  formatting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: formatting check
+        run: |
+          echo "checking formatting"
+          npm run format
