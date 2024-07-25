@@ -25,4 +25,4 @@ jobs:
         run: |
           echo "checking formatting"    
           npm run format
-        workign-directory: "."
+        workign-directory: "../../"
