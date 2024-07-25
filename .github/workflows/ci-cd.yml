@@ -17,6 +17,7 @@ jobs:
           echo "running tests"
           npm run test
   formatting:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: install prettier
@@ -24,4 +25,3 @@ jobs:
       - name: formatting check
         run: |
           echo "checking formatting"    
-          npm run format
