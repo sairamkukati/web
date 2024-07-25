@@ -19,7 +19,10 @@ jobs:
   formatting:
     runs-on: ubuntu-latest
     steps:
+      - name: install prettier
+        run: npm install prettier
       - name: formatting check
         run: |
-          echo "checking formatting"
+          echo "checking formatting"    
           npm run format
+        workign-directory: "."
